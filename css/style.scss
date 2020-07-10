@@ -1,0 +1,162 @@
+            @import "colors.scss";
+            @mixin flex-between {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            @mixin button {
+                background-color: #ff3f00;
+                color: white;
+                border-radius: 3px;
+                border: none;
+                padding: 12px 28px;
+            }
+            
+            p {
+                margin: 0px;
+            }
+            
+            ul {
+                list-style-type: none;
+                padding: 0px;
+            }
+            
+            body {
+                font-family: sans-serif;
+                font-weight: bolder;
+                line-height: 1.5;
+                header {
+                    background-color: $header;
+                    div {
+                        margin: 0px auto;
+                        width: 66%;
+                        img {
+                            padding: 10px;
+                            width: 100px;
+                            height: 50px;
+                        }
+                    }
+                }
+                section {
+                    #section-article1 {
+                        width: 30%;
+                        height: 850px;
+                        background-color: $leftsection;
+                        padding: 60px 20px 0px 0px;
+                        float: left;
+                        div {
+                            float: right;
+                            margin: 0px 12px;
+                            font-weight: normal;
+                            span:hover {
+                                background-color: $header;
+                                border: none;
+                            }
+                            span {
+                                border: 1px solid #735235;
+                                padding: 12px 15px;
+                                color: white;
+                                border-radius: 3px;
+                            }
+                        }
+                        form {
+                            visibility: hidden;
+                            text-align: center;
+                            clear: both;
+                            float: right;
+                            padding: 10px 0px 10px 0px;
+                            input,
+                            select {
+                                display: block;
+                                padding: 10px 15px;
+                                margin: 10px;
+                                border-radius: 5px;
+                                border: 1px solid pink;
+                            }
+                            input {
+                                width: 80%;
+                            }
+                             ::placeholder {
+                                color: black;
+                            }
+                            select {
+                                width: 92%;
+                            }
+                            #button1,
+                            #button2 {
+                                @include button;
+                                margin-left: 26px;
+                            }
+                        }
+                    }
+                    #section-article2 {
+                        visibility: hidden;
+                        width: 60%;
+                        float: left;
+                        padding: 60px 20px 0px 20px;
+                        .article-header {
+                            @include flex-between;
+                            border-bottom: 2px solid grey;
+                            .article-header-place {
+                                vertical-align: middle;
+                            }
+                        }
+                        .article-section-book-tickets {
+                            @include flex-between;
+                            padding: 20px;
+                            border: 1px solid grey;
+                            margin-top: 20px;
+                            border-radius: 5px;
+                            div {
+                                ul {
+                                    float: left;
+                                    padding-right: 20px;
+                                }
+                                button {
+                                    @include button;
+                                    margin-top: 80px;
+                                }
+                            }
+                        }
+                        .article-section-book-tickets:hover {
+                            background-color: #f2f2f2;
+                        }
+                        .article-section-book-tickets div:nth-child(1):active {
+                            background-color: #f2f2f2;
+                        }
+                    }
+                }
+                footer {
+                    clear: both;
+                    background-color: $footer;
+                    padding: 20px;
+                    width: 100%;
+                }
+            }
+            
+            @media only screen and(max-width:768px) {
+                body {
+                    section {
+                        #section-article1 {
+                            float: none;
+                            width: 100%;
+                            overflow: auto;
+                            padding: 60px 0px;
+                            div {
+                                float: none;
+                                text-align: center;
+                            }
+                            form {
+                                float: none;
+                                width: 40%;
+                                margin: 0px auto;
+                            }
+                        }
+                        #section-article2 {
+                            float: none;
+                            width: 100%;
+                            padding: 60px 0px;
+                        }
+                    }
+                }
+            }

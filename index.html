@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta nAMe="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="" href="../march19/index.js">
+</head>
+
+<body>
+    <header>
+        <div> <img src="../march19/css/images/logo.png" href=""></div>
+    </header>
+    <section>
+        <section id="section-article1">
+            <div><span id="article-oneway" onclick="oneWay()">One way</span>
+                <span id="article-return" onclick="Return()">Return</span>
+            </div>
+            <form id="section-form1">
+                <input type="text" placeholder="Enter Origin" id="oneway-origin" required>
+
+                <input type="text" placeholder="Enter Destination" id="oneway-destination" required>
+                <input type="date" placeholder="Departure Date" id="oneway-date" required>
+                <input type="number" placeholder="Passengers" required>
+
+
+                <input type="button" onclick="searchButton1()" id="button1" value="SEARCH">
+            </form>
+            <form id="section-form2">
+                <input type="text" placeholder="Enter Origin" id="return-origin">
+
+                <input type="text" placeholder="Enter Destination" id="return-destination" required>
+                <input type="date" placeholder="Departure Date" id="return-date" required>
+                <input type="number" placeholder="Passengers" required>
+
+
+                <input type="button" onclick="searchButton2()" id="button2" value="SEARCH">
+            </form>
+
+
+        </section>
+        <script>
+            function oneWay() {
+                document.getElementById('section-form1').style.visibility = "visible";
+            }
+
+            function Return() {
+                document.getElementById('section-form2').style.visibility = "visible";
+
+            }
+
+            function searchButton1() {
+
+                document.getElementById('section-article2').style.visibility = "visible";
+                for (var a = 1; a <= 3; a++) {
+                    document.getElementById("section-return" + a).style.visibility = "hidden ";
+                }
+                document.getElementById('section-return-date').style.visibility = "hidden";
+                var x = document.getElementById("oneway-origin").value;
+                document.getElementById("section-start").innerHTML = x;
+                for (var i = 1; i <= 3; i++) {
+                    document.getElementById("section-oneway-start" + i).innerHTML = x;
+                }
+
+                var y = document.getElementById("oneway-destination").value;
+                document.getElementById("section-end").innerHTML = y;
+                for (var j = 1; j <= 3; j++) {
+                    document.getElementById("section-oneway-end" + j).innerHTML = y;
+                }
+                var z = document.getElementById("oneway-date").value;
+                document.getElementById("depart").innerHTML = z;
+                var l = document.getElementById("oneway-origin").value;
+                document.getElementById("section-start").innerHTML = l;
+            }
+
+            function searchButton2() {
+                document.getElementById('section-article2').style.visibility = "visible";
+                for (var b = 1; b <= 3; b++) {
+                    document.getElementById("section-return" + b).style.visibility = "visible ";
+                }
+                document.getElementById('section-return-date').style.visibility = "visible";
+                var p = document.getElementById("return-origin").value;
+                document.getElementById("section-end").innerHTML = p;
+                for (var k = 1; k <= 3; k++) {
+                    document.getElementById("section-return-start" + k).innerHTML = p;
+                }
+
+                var q = document.getElementById("return-destination").value;
+                document.getElementById("section-end").innerHTML = q;
+                for (var l = 1; l <= 3; l++) {
+                    document.getElementById("section-return-end" + l).innerHTML = q;
+                }
+                var r = document.getElementById("return-date").value;
+                document.getElementById("return").innerHTML = r;
+                var n = document.getElementById("return-origin").value;
+                document.getElementById("section-end").innerHTML = n;
+            }
+        </script>
+        <section id="section-article2">
+            <div class="article-header">
+                <div class="article-header-place">
+                    <span id="section-start"></span>>
+                    <span id="section-end"></span>
+                </div>
+                <div>
+                    <p><label for="depart">Depart:</label>
+                        <span id="depart"></span>
+                    </p>
+                    <p id="section-return-date"><label for="return">Return:</label>
+                        <span id="return"> 6 th june 2016</span>
+                    </p>
+                </div>
+            </div>
+            <!--box1-->
+            <div class="article-section-book-tickets">
+                <div>
+                    <h1>Rs 9.500.00</h1>
+                    <ul>
+                        <li>Al-202</li>
+                        <li>
+                            <span id="section-oneway-start1"></span>>
+                            <span id="section-oneway-end1">DEL</span>
+                        </li>
+                        <li>
+                            <label for="depart">Depart:</label>
+                            <span id="depart">10 AM</span>
+                        </li>
+                        <li> <label for="arrive">Arrive:</label>
+                            <span id="arrive">12.00 AM</span></li>
+                    </ul>
+                    <ul id="section-return1">
+                        <li>Al-203</li>
+                        <li>
+                            <span id="section-return-start1">DEL</span>>
+                            <span id="section-return-end1">PNQ</span>
+
+                        </li>
+                        <li>
+                            <label for="depart">Depart:</label>
+                            <span id="depart">8 AM</span>
+                        </li>
+                        <li> <label for="arrive">Arrive:</label>
+                            <span id="arrive">11.00 AM</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <button>BOOK THIS FLIGHT</button>
+                </div>
+            </div>
+            <!--box 2-->
+            <div class="article-section-book-tickets">
+                <div>
+                    <h1>Rs 9.500.00</h1>
+                    <ul>
+                        <li>Al-202</li>
+                        <li>
+                            <span id="section-oneway-start2"></span>>
+                            <span id="section-oneway-end2">DEL</span>
+                        </li>
+                        <li>
+                            <label for="depart">Depart:</label>
+                            <span id="depart">10 AM</span>
+                        </li>
+                        <li> <label for="arrive">Arrive:</label>
+                            <span id="arrive">12.00 AM</span></li>
+                    </ul>
+                    <ul id="section-return2">
+                        <li>Al-203</li>
+                        <li>
+                            <span id="section-return-start2">DEL</span>>
+                            <span id="section-return-end2">PNQ</span>
+
+                        </li>
+                        <li>
+                            <label for="depart">Depart:</label>
+                            <span id="depart">8 AM</span>
+                        </li>
+                        <li> <label for="arrive">Arrive:</label>
+                            <span id="arrive">11.00 AM</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <button>BOOK THIS FLIGHT</button>
+                </div>
+            </div>
+            <!--box 3-->
+            <div class="article-section-book-tickets">
+                <div>
+                    <h1>Rs 9.500.00</h1>
+                    <ul>
+                        <li>Al-202</li>
+                        <li>
+                            <span id="section-oneway-start3"></span>>
+                            <span id="section-oneway-end3">DEL</span>
+                        </li>
+                        <li>
+                            <label for="depart">Depart:</label>
+                            <span id="depart">10 AM</span>
+                        </li>
+                        <li> <label for="arrive">Arrive:</label>
+                            <span id="arrive">12.00 AM</span></li>
+                    </ul>
+                    <ul id="section-return3">
+                        <li>Al-203</li>
+                        <li>
+                            <span id="section-return-start3">DEL</span>>
+                            <span id="section-return-end3">PNQ</span>
+
+                        </li>
+                        <li>
+                            <label for="depart">Depart:</label>
+                            <span id="depart">8 AM</span>
+                        </li>
+                        <li> <label for="arrive">Arrive:</label>
+                            <span id="arrive">11.00 AM</span></li>
+                        </ulid="section-return2>
+                </div>
+                <div>
+                    <button>BOOK THIS FLIGHT</button>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </section>
+</body>
+
+</html>
+
+</html>

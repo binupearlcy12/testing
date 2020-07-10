@@ -1,0 +1,193 @@
+p {
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+body header {
+  background-color: #383838;
+}
+
+body header div {
+  margin: 0px auto;
+  width: 66%;
+}
+
+body header div img {
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+body section #section-article1 {
+  width: 30%;
+  height: 850px;
+  background-color: #4e3832;
+  padding: 60px 20px 0px 0px;
+  float: left;
+}
+
+body section #section-article1 div {
+  float: right;
+  margin: 0px 12px;
+  font-weight: normal;
+}
+
+body section #section-article1 div span:hover {
+  background-color: #383838;
+  border: none;
+}
+
+body section #section-article1 div span {
+  border: 1px solid #735235;
+  padding: 12px 15px;
+  color: white;
+  border-radius: 3px;
+}
+
+body section #section-article1 form {
+  visibility: hidden;
+  text-align: center;
+  clear: both;
+  float: right;
+  padding: 10px 0px 10px 0px;
+}
+
+body section #section-article1 form input,
+body section #section-article1 form select {
+  display: block;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid pink;
+}
+
+body section #section-article1 form input {
+  width: 80%;
+}
+
+body section #section-article1 form ::-webkit-input-placeholder {
+  color: black;
+}
+
+body section #section-article1 form :-ms-input-placeholder {
+  color: black;
+}
+
+body section #section-article1 form ::-ms-input-placeholder {
+  color: black;
+}
+
+body section #section-article1 form ::placeholder {
+  color: black;
+}
+
+body section #section-article1 form select {
+  width: 92%;
+}
+
+body section #section-article1 form #button1,
+body section #section-article1 form #button2 {
+  background-color: #ff3f00;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 28px;
+  margin-left: 26px;
+}
+
+body section #section-article2 {
+  visibility: hidden;
+  width: 60%;
+  float: left;
+  padding: 60px 20px 0px 20px;
+}
+
+body section #section-article2 .article-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid grey;
+}
+
+body section #section-article2 .article-header .article-header-place {
+  vertical-align: middle;
+}
+
+body section #section-article2 .article-section-book-tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  border: 1px solid grey;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+body section #section-article2 .article-section-book-tickets div ul {
+  float: left;
+  padding-right: 20px;
+}
+
+body section #section-article2 .article-section-book-tickets div button {
+  background-color: #ff3f00;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 28px;
+  margin-top: 80px;
+}
+
+body section #section-article2 .article-section-book-tickets:hover {
+  background-color: #f2f2f2;
+}
+
+body section #section-article2 .article-section-book-tickets div:nth-child(1):active {
+  background-color: #f2f2f2;
+}
+
+body footer {
+  clear: both;
+  background-color: #383838;
+  padding: 20px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  body section #section-article1 {
+    float: none;
+    width: 100%;
+    overflow: auto;
+    padding: 60px 0px;
+  }
+  body section #section-article1 div {
+    float: none;
+    text-align: center;
+  }
+  body section #section-article1 form {
+    float: none;
+    width: 40%;
+    margin: 0px auto;
+  }
+  body section #section-article2 {
+    float: none;
+    width: 100%;
+    padding: 60px 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
